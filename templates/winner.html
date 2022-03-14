@@ -1,0 +1,24 @@
+<html>
+  
+<head>
+    <title>{{ title }} - Rock, Paper, Sissors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1 id = "header">Rock, Paper, Scissors</h1>
+        <ul>
+          <li><a href="/game">PLAY</a></li>
+        </ul>
+        <img src="static/images/RPS.png" alt="rock, paper, scissors" class="image">
+
+    {% if winner != None %}
+    <p class="result">The winner is {{ winner.name }}!</p>
+    {% else %}
+    <p class="result">It's a draw!</p>
+    {% endif %}
+
+  </body>
+</html>

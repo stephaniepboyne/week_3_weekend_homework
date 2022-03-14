@@ -1,0 +1,41 @@
+<html>
+
+    <head>
+      <title>{{ title }} - Rock, Paper, Sissors</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 id = "header">Rock, Paper, Scissors</h1>
+        <ul>
+          <li><a href="/game">PLAY</a></li>
+        </ul>
+        <img src="static/images/RPS.png" alt="rock, paper, scissors" class="image">
+        <h2>Let's Play!</h2>
+        <h3>Rock, Paper or Scissors?</h3>
+
+        <div>
+            <form action="/game" method="post"> 
+                <label for="choice1" class = "p1">PLAYER ONE</label>
+                <select name="choice1" id="choice1">
+                    <option value="">--Please choose an option--</option>
+                    <option value="rock">Rock</option>
+                    <option value="paper">Paper</option>
+                    <option value="scissors">Scissors</option>
+                </select>
+                <label for="choice2" class = "p1">PLAYER TWO</label>
+                <select name="choice2" id="choice2">
+                    <option value="">--Please choose an option--</option>
+                    <option value="rock">Rock</option>
+                    <option value="paper">Paper</option>
+                    <option value="scissors">Scissors</option>
+                </select>
+                
+                <input type="submit" value="Submit" id="input" >
+            </form>
+        </div>
+
+    </body>
+</html>
